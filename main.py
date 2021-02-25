@@ -1,6 +1,7 @@
 #burgus ababfhjebhfjbvewhfvwefvwhdfhsfgwgy
 
 """
+swgdfsdfx
 """
 from flask import Flask, render_template, abort, Response, url_for, redirect, request
 from flask_wtf import FlaskForm
@@ -81,8 +82,6 @@ def posts():
       cur.execute("DELETE FROM replies WHERE post_id=?",(deltform.id.data,))
       con.commit()
       return redirect(url_for('index'))
-    
-    text = request.args.get('jsdata')
     
     cur.execute("SELECT * FROM posts")
     data = cur.fetchall()
