@@ -1,0 +1,23 @@
+{% for i in data %}
+<div  id="{{ i[0] }}">
+
+<blockquote class="post">
+       <p><b>{{ i[1] }}</b>     <i>#{{ i[0] }}</i><p>
+    {{ i[2] }}
+        {% for j in rdata %}
+        {% if j[1] == i[0] %}
+            <blockquote class="reply">{{ j[2] }}</blockquote>
+        {% endif %}
+        {% endfor %}
+    <form action="/#{{ i[0] }}" method="POST" autocomplete="off">{{ rform.idd(value=i[0]) }} 
+        {{ rform.content }} 
+        <input type="submit" value="reply">
+    </form>
+
+    <form action="/" method="POST">{{ deltform.id(value=i[0]) }}<input type="submit" value="X"></form>
+
+</blockquote>
+
+</div>
+
+{% endfor %}

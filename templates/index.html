@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <link type="text/css" href="/static/css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        
+    </head>
+<body onload="fgbbg()">
+<h2>epic gaming</h2>
+<form action="/" method="POST" autocomplete="off">
+    <p>post something</p>
+{{ form.title(value="title",size=25) }}
+<br>
+{{ form.content(size=50, value="content") }}
+<br>
+<input type="submit" value="post">
+</form>
+<div id="posts"> </div>
+<script>
+          function fgbbg() {
+            setInterval(function() {$("#posts").load("/posts")},500)
+          }
+          </script>
+
+</body>
+</html>

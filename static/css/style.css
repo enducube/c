@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 50%;
+}
+
+blockquote.post {
+    background-color: #dadada;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 2%;
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+}
+.reply {
+    background-color: rgb(161, 161, 161);
+    border-radius: 5px;
+    padding: 5px;
+}
+:target {
+    border: 1px;
+    background-color: sandybrown;
+    padding-left: 10px;
+    padding: 5px;
+    border-radius: 2px;
+
+}
